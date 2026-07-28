@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import articleData from "../articles.json"; 
 
-const slugify = (text) => 
+const slugify = (text:any) => 
   text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
 
 const ArticleTemplate = () => {

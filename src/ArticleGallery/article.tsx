@@ -5,7 +5,7 @@ import articles from '../articles.json';
 
 export default function Article() {
 
-  const slugify = (text) =>
+  const slugify = (text:any) =>
   text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
 
   return (
@@ -21,8 +21,8 @@ export default function Article() {
               className="articles-preview"
             >
               <div className="overlay">
-                <h2>{article.title}</h2>
-                <p dangerouslySetInnerHTML={{ __html: article.content.split('</p')[0] }}></p>
+                <h2 title={article.title}>{article.title}</h2>
+                <p>{article.lead}</p>
               </div>
             </div>
           </Link>

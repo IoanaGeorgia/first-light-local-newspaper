@@ -1,5 +1,4 @@
 import newsData from '../newData.json'
-import type { ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import journalist_data from "../journalist.json";
