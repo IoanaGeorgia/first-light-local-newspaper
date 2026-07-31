@@ -1,12 +1,12 @@
 import journalist_data from "../journalist.json";
 
-const Journalist = () => {
+const JournalistTemplate = () => {
   const journalist = journalist_data[0];
 
   return (
     <div className="journalist-page">
-    <img src={journalist.image}></img>
-        <h3>Journalist of the month</h3>
+      <img src={journalist.image} alt="journalist.name"></img>
+      <h3>Journalist of the month</h3>
       <h2>{journalist.name}</h2>
       <div
         className="journalist-content"
@@ -16,4 +16,4 @@ const Journalist = () => {
   );
 };
 
-export default Journalist;
+export default JournalistTemplate;

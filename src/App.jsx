@@ -2,12 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header/header";
 import Footer from "./Footer/footer";
 import Welcome from "./welcome/welcome";
-import EventTemplate from "./templaes/EventTemplate";
+import EventTemplate from "./templates/EventTemplate";
 import Article from "./ArticleGallery/article";
-import ArticleTemplate from "./templaes/ArticleTemplate";
-import ScrollToTop from "./templaes/ScrollToTop";
-import NotFound from "./templaes/NotFound";
-import Journalist from "./templaes/Journalist";
+import ArticleTemplate from "./templates/ArticleTemplate";
+import ScrollToTop from "./templates/ScrollToTop";
+import NotFound from "./templates/NotFound";
+import JournalistTemplate from "./templates/JournalistTemplate";
+import InterviewTemplate from "./templates/InterviewTemplate";
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
           <Route path="/articles" element={<Article />} />
           <Route path="/articles/:slug" element={<ArticleTemplate />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/journalist" element={<Journalist />} />
+          <Route path="/journalist" element={<JournalistTemplate />} />
+          <Route path="/interview/:slug" element={<InterviewTemplate />} />
         </Routes>
       </main>
       <Footer />
