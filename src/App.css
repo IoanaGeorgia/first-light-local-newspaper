@@ -507,6 +507,48 @@ button {
   margin: auto;
 }
 
+
+
+.footer-wrapper {
+  height: 10rem;
+  background-color: var(--defaultColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+    font-size:2.5rem;
+        padding-left:20px;
+  padding-right:20px;
+  font-size: 2.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.footer-wrapper p {
+  cursor: pointer;
+  max-width:fit-content;
+  max-width: fit-content;
+}
+
+
+.footer-under {
+  background-color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: var(--defaultColor);
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+
+}
+
+
+
 @media (max-width: 1545px) {
   .welcome .selection .article p {
     font-size: 3rem;
@@ -639,6 +681,11 @@ button {
 @media (max-width: 680px) {
   .interview .interview-cover {
     min-height: 300px;
+  }
+
+
+  .show-articles button{
+    font-size:2rem;
   }
 }
 

@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <div className="footer">
-    <div className="footer-wrapper">
+    <div className="footer-wrapper top-brand">
 
     <p onClick={goToMain}>FIRST LIGHT</p>
   
