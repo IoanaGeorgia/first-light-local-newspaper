@@ -10,10 +10,17 @@ import loreal from "../assets/brands/Lorean.png";
 
 import journalist_data from "../journalist.json";
 import interview_home from "../interview_home.json";
+
 import articles from "../articles.json";
 
 export default function Welcome() {
   const navigate = useNavigate();
+
+  const firstFourArticles = articles.slice(0, 4);
+
+  const group1 = firstFourArticles.slice(0, 2);
+  const group2 = firstFourArticles.slice(2, 4);
+  const group3 = firstFourArticles.slice(4, 6);
 
   const handleSeeAll = () => {
     navigate("/articles");
@@ -88,49 +95,41 @@ export default function Welcome() {
       </div>
 
       <div className="selection">
-        <a
-          target="_blank"
-          href="http://localhost:5173/articles/why-did-the-city-museum-have-to-cancel-its-exhibit"
-          aria-label="Learn more about Why did the City Museum have to cancel it's exhibit?"
-        >
-          <div className="article article1">
-            <p>Why did the City Museum have to cancel it's exhibit?</p>
-          </div>
-        </a>
-        <a
-          target="_blank"
-          href="http://localhost:5173/articles/petra-jones-interview-the-inner-workings-of-a-fantasy"
-          aria-label="Learn more about Petra Jones interview: The inner workings of a fantasy"
-        >
-          <div className="article article2">
-            <p>Petra Jones interview: The inner workings of a fantasy</p>
-          </div>
-        </a>
+        {group1.map((article, index) => {
+          const slug = slugify(article.title);
+          return (
+            <Link
+              key={article.title || index}
+              to={`/articles/${slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Learn more about ${article.title}`}
+            >
+              <div className={`article article${index + 1}`}>
+                <p>{article.title}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       <div className="selection">
-        <a
-          target="_blank"
-          href="http://localhost:5173/articles/restaurating-the-kasa-castle-works-begin"
-          aria-label="Learn more about Restaurating the Kasa castle: works begin"
-        >
-          <div className="article article3">
-            <p>Restaurating the Kasa castle: works begin</p>
-          </div>
-        </a>
-
-        <a
-          target="_blank"
-          href="http://localhost:5173/articles/thousands-of-people-prepare-for-the-city-footbal-friendly-competition"
-          aria-label="Learn more about  Thousands of people prepare for the city footbal friendly competition"
-        >
-          <div className="article article4">
-            <p>
-              Thousands of people prepare for the city footbal friendly
-              competition
-            </p>
-          </div>
-        </a>
+        {group2.map((article, index) => {
+          const slug = slugify(article.title);
+          return (
+            <Link
+              key={article.title || index + 2}
+              to={`/articles/${slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Learn more about ${article.title}`}
+            >
+              <div className={`article article${index + 3}`}>
+                <p>{article.title}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       <div className="interview">
@@ -173,25 +172,22 @@ export default function Welcome() {
       </div>
 
       <div className="selection">
-        <a
-          target="_blank"
-          href="http://localhost:5173/articles/summer-exhibition-end"
-          aria-label="Learn more about the Summer Exhibition end"
-        >
-          <div className="article article5">
-            <p>Summer Exhibition end</p>
-          </div>
-        </a>
-        <a
-          target="_blank"
-          href="http://localhost:5173/articles/eduline-a-magazine-dedicated-to-seniors"
-          aria-label="Learn more about Eduline, a magazine dedicated to seniors"
-        >
-          {" "}
-          <div className="article article6">
-            <p>'Eduline', a magazine dedicated to seniors</p>
-          </div>
-        </a>
+        {group3.map((article, index) => {
+          const slug = slugify(article.title);
+          return (
+            <Link
+              key={article.title || index + 2}
+              to={`/articles/${slug}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Learn more about ${article.title}`}
+            >
+              <div className={`article article${index + 3}`}>
+                <p>{article.title}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
 
       <div className="show-articles">
