@@ -20,8 +20,22 @@
   <meta name="twitter:title" content="First Light - A Newsletter for Aaru, Georgia" />
   <meta name="twitter:description" content="A site meant to keep the inhabitants of Aaru, Georgia up to date with the newest events in their neighbourhood." />
   <meta name="twitter:image" content="https://ioanageorgia.github.io/first-light-local-newspaper/first-light-logo.png" />
-  <script type="module" crossorigin src="/first-light-local-newspaper/assets/index-BnGk8YOE.js"></script>
-  <link rel="stylesheet" crossorigin href="/first-light-local-newspaper/assets/index-B7JHLl1A.css">
+
+  <script type="text/javascript">
+  (function(l) {
+    if (l.search[1] === '/' ) {
+      var decoded = l.search.slice(1).split('&').map(function(s) { 
+        return s.replace(/~and~/g, '&')
+      }).join('?');
+      window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+      );
+    }
+  }(window.location))
+</script>
+
+  <script type="module" crossorigin src="/first-light-local-newspaper/assets/index-CELgIhOP.js"></script>
+  <link rel="stylesheet" crossorigin href="/first-light-local-newspaper/assets/index-CqAZ_ORo.css">
 </head>
 
 <body>
