@@ -12,7 +12,7 @@ import InterviewTemplate from "./templates/InterviewTemplate";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/first-light-local-newspaper">
       <Header />
       <main>
         <ScrollToTop />
