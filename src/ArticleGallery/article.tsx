@@ -5,8 +5,11 @@ import articles from '../articles.json';
 
 export default function Article() {
 
-  const slugify = (text:any) =>
-  text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '');
+const slugify = (text: any) =>
+  text
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "");
 
   return (
     <main className="articles">

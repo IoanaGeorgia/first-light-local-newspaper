@@ -511,7 +511,7 @@ button {
 
 .footer-wrapper {
   height: 10rem;
-  background-color: var(--defaultColor);
+  background-color: var(--color-bg-light);
   display: flex;
   justify-content: center;
   align-items: center;

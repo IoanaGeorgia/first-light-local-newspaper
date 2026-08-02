@@ -16,7 +16,7 @@ import articles from "../articles.json";
 export default function Welcome() {
   const navigate = useNavigate();
 
-  const firstFourArticles = articles.slice(0, 4);
+  const firstFourArticles = articles.slice(0, 6);
 
   const group1 = firstFourArticles.slice(0, 2);
   const group2 = firstFourArticles.slice(2, 4);
@@ -101,7 +101,6 @@ export default function Welcome() {
             <Link
               key={article.title || index}
               to={`/articles/${slug}`}
-              target="_blank"
               rel="noopener noreferrer"
               aria-label={`Learn more about ${article.title}`}
             >
@@ -120,7 +119,6 @@ export default function Welcome() {
             <Link
               key={article.title || index + 2}
               to={`/articles/${slug}`}
-              target="_blank"
               rel="noopener noreferrer"
               aria-label={`Learn more about ${article.title}`}
             >
@@ -178,7 +176,6 @@ export default function Welcome() {
             <Link
               key={article.title || index + 2}
               to={`/articles/${slug}`}
-              target="_blank"
               rel="noopener noreferrer"
               aria-label={`Learn more about ${article.title}`}
             >
